@@ -8,6 +8,8 @@ app.use(cors());
 
 const postRouter = require('./routes/Posts');
 app.use("/post",postRouter)
+const commentsRouter = require('./routes/Comments');
+app.use("/Comments",commentsRouter)
 
 
 db.sequelize.sync().then(()=> {
